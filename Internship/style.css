@@ -266,7 +266,7 @@ h2{
 }
 .what .card{
 	position: relative;
-	max-width:40vw;
+	min-width:20vw;
 	height:10vh;
 	display:flex;
 	flex-flow: column;
@@ -281,7 +281,7 @@ h2{
 }
 .what .card .card-inner{
 	position: relative;
-	width: 18vw;
+	min-width: 18vw;
 	height:20vh;
 	text-align: center;
 
@@ -291,7 +291,7 @@ h2{
 .what .card-outer{
 	  position: absolute;
 	  top:5rem;
-	  max-width:20vw;
+	  width:20vw;
 	  min-height:13vh;
 	  overflow: hidden;
 	  padding:0.5rem;
@@ -362,6 +362,7 @@ h2{
 @media (max-width:786px ){
 	.header{
 		width:100vw;
+		padding: 1rem;
 		display: grid;
 		grid-column-start:(2,1fr); 
 
@@ -440,6 +441,15 @@ h2{
 	color:white;
 	font-size:1rem;
 }
+
+  /*.what .card{
+  	width:40vw;
+
+  }*/
+  .what .card .card-inner  {
+  	
+      margin:1rem;
+  }
 .footer {
 
       	display: flex;
