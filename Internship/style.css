@@ -270,6 +270,7 @@ h2{
 	height:10vh;
 	display:flex;
 	flex-flow: column;
+	flex-wrap: wrap;
 	border:1px solid black;
 	background-color: #cac4ed;
 	overflow: hidden;
@@ -277,7 +278,7 @@ h2{
 }
 .card:hover{
 	cursor:pointer;
-	height: 50vh;
+	min-height: 80vh;
 }
 .what .card .card-inner{
 	position: relative;
@@ -292,13 +293,16 @@ h2{
 	  position: absolute;
 	  top:5rem;
 	  width:20vw;
-	  min-height:13vh;
+	  min-height:14vh;
 	  overflow: hidden;
 	  padding:0.5rem;
+
 
 }
 .what .card-outer p{
       text-align: justify;
+      padding:0.5rem;
+
      
 }
    
@@ -318,7 +322,7 @@ h2{
 	margin:2rem;
 
 }
- .task .card{
+ .task .card2{
  	width:100vw;
  	display: flex;
 	flex-wrap:wrap;
@@ -442,13 +446,22 @@ h2{
 	font-size:1rem;
 }
 
-  /*.what .card{
-  	width:40vw;
+  .what .container{
+  	display: flex;
+    flex-direction: column;
+    margin:0 1rem;
+    
 
-  }*/
+  }
   .what .card .card-inner  {
   	
       margin:1rem;
+  }
+  .what .card .card-outer{
+  	width:100%;
+  }
+  .card:hover{
+  	min-height: 100vh
   }
 .footer {
 
