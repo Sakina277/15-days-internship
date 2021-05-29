@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student-Grade-Calcy</title>
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<style type="text/css">
+		body{
+	margin:0px;
+	padding: 0px;
+	background-color:#4caf50ba;
+	max-width: 100%;
+
+
+}
+#container{
+	border: 1px solid black;
+	border-radius: 10px;
+	color: white;
+	max-width:42%;
+	padding:35px;
+	display: flex;
+	align-items: center;
+	/*justify-content: space-between;*/
+    margin:120px auto;
+    background-color: #000000ce;
+    position: relative;
+    box-shadow: 20px 20px 50px 0.2px  black;
+    transition-property: all;
+    transition-duration:1s; 
+}
+#container:hover{
+	width:41%;
+	box-shadow:1px 2px 60px 3px #4caf50ba;
+}
+
+h1{
+	display: flex;
+	max-width:50px;
+	margin:37px;
+	border-left:4.5px solid #4caf50ba;	
+	color:#4caf50ba;
+	transition-property: all;
+	transition-duration: 1s;
+}
+
+
+#subMain{
+	color: #4caf50ba;
+	margin:10px;
+	cursor: pointer;
+	transition-property: all;
+	transition-duration: 2s;
+	 position:relative;
+	 right:20px;
+}
+#subMain:hover{
+	text-decoration:underline;
+	font-size: 20px;
+
+	}
+
+.right{
+	
+	width:30%;
+	display: block;
+	margin: auto;
+	line-height: 28px;
+	transform: translate(30px, 0px);	
+}
+.sub-right{
+	border-bottom: 1px solid grey;
+	background-color:transparent;
+	 color: white;
+	 padding: 10px 5px;
+	 width: 200px;
+	 margin:10px;
+	 border-right: 0px none;
+	 position:relative;
+	 right:20px;
+}
+input:focus{
+	outline: none;
+}
+::placeholder{
+	color: white;
+}
+
+#demo{
+	display: block;
+	/*border: 1px solid red;*/
+	width: 90%;	
+	position:absolute;
+	bottom:15px;
+	margin: 0px 5px;
+	font-family: sans-serif;
+	font-size:15px;
+
+}
+
+	
+
+	</style>
+</head>
+<body>
+	
+	<div id="container">
+		<!-- <div class="border"></div> -->
+	
+		<h1>STUDENT GRADE CALCY</h1>
+		<div class="right">
+		<input type="text" value="" class="sub-right" placeholder="WEBPROGRAMMING" >
+		<input type="text" value="" class="sub-right" placeholder="MATHS" >
+		<input type="text" value="" class="sub-right" placeholder="PHYSICS">
+		<input type="text" value="" class="sub-right" placeholder="COMPUTER" >
+		<p id="subMain">SHOWPERCENTAGE</P>
+		</div>
+		<p id="demo"></p>
+	</div>
+	<script type="text/javascript">
+
+		let sum=0;
+		let per=document.getElementsByClassName('sub-right');
+		let subMain=document.getElementById("subMain");
+		subMain.addEventListener("click",function(){
+			for(var i=0;i<=per.length;i++){
+				let a=parseInt(per[i].value);
+				sum=sum+a;
+				let percentage=(sum/400)*100;
+				if(sum<=100){
+					 document.getElementById("demo").innerHTML=`Out of 400 your total is ${sum} .You are fail`;
+
+				}
+
+				else if(sum >100 && sum<=150	){
+				 document.getElementById("demo").innerHTML=`Out of 400 your total is ${sum} and your percentage is ${percentage} .Your grade is C and you  are PASS`;
+				}
+				else if(sum>150 &&sum<=320){
+					document.getElementById("demo").innerHTML=`Out of 400 your total is ${sum}and your percentageis ${percentage}.Your grade is B and you are PASS`;
+
+				}
+				else if(sum>320 && sum<=400){
+					 document.getElementById("demo").innerHTML=`Out of 400 your total is ${sum}and your percentageis ${percentage} .Your grade is A and you are PASS `;
+				}
+				else if(sum!=Number){
+					document.getElementById("demo").innerHTML=`Not a valid input please enter Number between 1-100`;
+
+				}
+
+
+
+			}
+			
+		
+})
+
+
+		
+		
+	
+	</script>
+
+</body>
+</html>
